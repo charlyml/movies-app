@@ -15,6 +15,7 @@ class Peliculas {
 }
 
 class Pelicula {
+  String uniqueId;
   double popularity;
   int voteCount;
   bool video;
@@ -70,5 +71,13 @@ class Pelicula {
     }
 
     return 'https://image.tmdb.org/t/p/w500/$posterPath';
+  }
+
+  getBackgroundImg() {
+    if (posterPath == null) {
+      return "https://image.shutterstock.com/image-vector/no-image-available-sign-internet-600w-261719003.jpg";
+    }
+
+    return 'https://image.tmdb.org/t/p/w500/$backdropPath';
   }
 }
